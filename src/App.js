@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import { ReactComponent as Logo } from './Logo.svg';
+import { Link } from 'react-router-dom';
 
 function App() {
   return (
@@ -26,7 +27,7 @@ function App() {
             placeholder="Password"
           />
           <div className="forgot-password">
-            <a href>Forgot Password?</a>
+            <Link to="/forgot-password">Forgot Password?</Link>
           </div>
           <div className="login-button-wrapper">
           <button className="login-button">LOGIN</button>

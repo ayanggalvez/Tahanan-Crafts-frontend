@@ -1,17 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
+import ForgotPass from './ForgotPass';
+import ForgotPass2 from './ForgotPass2';
+import ChangePassword from './ChangePassword'; // <-- added
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+  <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<App />} />
+      <Route path="/forgot-password" element={<ForgotPass />} />
+      <Route path="/forgotpass2" element={<ForgotPass2 />} />
+      <Route path="/change-password" element={<ChangePassword />} /> {/* <-- new route */}
+    </Routes>
+  </BrowserRouter>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
