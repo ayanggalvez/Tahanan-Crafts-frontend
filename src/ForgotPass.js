@@ -23,16 +23,12 @@ function ForgotPass() {
         </div>
 
         <div className="form-wrapper">
-          {/* Email */}
-          <input type="email" className="login-input" placeholder="Email" />
-
-          {/* Divider */}
-          <div className="divider">
-            <span>OR</span>
-          </div>
-
-          {/* Phone number */}
-          <input type="tel" className="login-input" placeholder="Phone number" />
+          {/* Single Email or Phone Input */}
+          <input
+            type="text"
+            className="login-input"
+            placeholder="Email or Phone Number"
+          />
 
           {/* Send Code Button */}
           <div className="login-button-wrapper">
